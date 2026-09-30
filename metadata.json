@@ -1,0 +1,6 @@
+{
+  "name": "Velmora Estates",
+  "description": "Premier real estate platform for luxury homes, modern apartments, villas, commercial properties, and real estate investments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
