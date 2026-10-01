@@ -80,6 +80,26 @@ app.post('/api/assistant/chat', async (req, res) => {
   return res.status(503).json({ error: 'No GEMINI_API_KEY configured' });
 });
 
+// Explicit sitemap.xml endpoint with application/xml header
+app.get('/sitemap.xml', (_req, res) => {
+  const sitemapPath = path.resolve(__dirname, 'public', 'sitemap.xml');
+  res.header('Content-Type', 'application/xml');
+  res.sendFile(sitemapPath);
+});
+
+// Explicit robots.txt endpoint
+app.get('/robots.txt', (_req, res) => {
+  const robotsPath = path.resolve(__dirname, 'public', 'robots.txt');
+  res.header('Content-Type', 'text/plain');
+  res.sendFile(robotsPath);
+});
+
+// Explicit Google Search Console verification file endpoint
+app.get('/googlec7fa3181f2ab08ba.html', (_req, res) => {
+  res.header('Content-Type', 'text/html');
+  res.send('google-site-verification: googlec7fa3181f2ab08ba.html\n');
+});
+
 // Setup Vite middleware in dev or static files in production
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {

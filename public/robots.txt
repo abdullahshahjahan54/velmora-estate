@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velmora-estate.netlify.app/sitemap.xml

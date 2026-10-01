@@ -330,7 +330,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
             <span className="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
             <span className="hover:text-white cursor-pointer transition-colors">Fair Housing Act</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Sitemap</span>
+            <a
+              href="/sitemap.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors underline decoration-[#C2A772] underline-offset-4"
+              title="View XML Sitemap"
+            >
+              Sitemap (XML)
+            </a>
           </div>
         </div>
 
